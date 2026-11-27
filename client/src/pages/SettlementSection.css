@@ -1,0 +1,237 @@
+
+.settlement-section {
+  margin-top: 24px;
+}
+
+.settlement-outstanding {
+  color: #2300a4;
+  background: #e9e6ff;
+  border-radius: 10px;
+  padding: 9px 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.settlement-summary {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 20px 0;
+}
+
+.settlement-summary > div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 15px 17px;
+  background: #f7f7fc;
+  border: 1px solid #e9e8f2;
+  border-radius: 11px;
+}
+
+.settlement-summary small {
+  color: #73738a;
+  font-size: 12px;
+}
+
+.settlement-summary strong {
+  color: #2300a4;
+  font-size: 19px;
+}
+
+.settlement-loading {
+  padding: 28px 0;
+  text-align: center;
+  color: #6c757d;
+}
+
+.settlement-empty {
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #198754;
+  text-align: center;
+}
+
+.settlement-empty i {
+  font-size: 34px;
+}
+
+.settlement-empty span {
+  color: #6c757d;
+}
+
+.settlement-status {
+  display: inline-block;
+  border-radius: 20px;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  background: #fff3cd;
+  color: #856404;
+  white-space: nowrap;
+}
+
+.settlement-status.partial {
+  background: #cff4fc;
+  color: #055160;
+}
+
+.settlement-status.paid {
+  background: #d1e7dd;
+  color: #0f5132;
+}
+
+.settlement-status.awaiting {
+  background: #fff0d9;
+  color: #8a5100;
+}
+
+.settlement-status.rejected {
+  background: #f8d7da;
+  color: #842029;
+}
+
+.settlement-pending-note {
+  display: block;
+  margin-top: 4px;
+  color: #946200;
+  font-size: 11px;
+}
+
+.record-payment-form {
+  border-top: 1px solid #e8e8f0;
+  padding-top: 20px;
+}
+
+.record-payment-form h5,
+.payment-history h5 {
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.record-payment-btn {
+  border: 0;
+  border-radius: 9px;
+  padding: 11px 18px;
+  color: #fff;
+  background: #2300a4;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.record-payment-btn:hover:not(:disabled) {
+  background: #180078;
+}
+
+.record-payment-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.payment-history {
+  border-top: 1px solid #e8e8f0;
+  margin-top: 24px;
+  padding-top: 20px;
+}
+
+.payment-history-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 14px 0;
+  border-bottom: 1px solid #eeeef4;
+}
+
+.payment-history-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.payment-history-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 14px;
+}
+
+.payment-history-row small {
+  color: #777;
+  font-size: 12px;
+}
+
+.payment-note {
+  color: #555 !important;
+}
+
+.payment-history-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 3px;
+}
+
+.settlement-confirm-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.settlement-confirm-btn,
+.settlement-reject-btn {
+  border: 0;
+  border-radius: 7px;
+  padding: 7px 13px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.settlement-confirm-btn {
+  color: #fff;
+  background: #198754;
+}
+
+.settlement-confirm-btn:hover:not(:disabled) {
+  background: #146c43;
+}
+
+.settlement-reject-btn {
+  color: #842029;
+  background: #f8d7da;
+}
+
+.settlement-reject-btn:hover:not(:disabled) {
+  background: #f1bfc4;
+}
+
+.settlement-confirm-btn:disabled,
+.settlement-reject-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .event-section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .settlement-outstanding {
+    white-space: normal;
+  }
+
+  .settlement-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .payment-history-main {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+  }
+}

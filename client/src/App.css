@@ -1,0 +1,850 @@
+
+/* =========================================
+   GLOBAL LAYOUT FIXES
+========================================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.app-container {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  min-height: 0;
+  background: #97c1ffb7;
+  overflow: hidden;
+}
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.sidebar {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 250px !important;
+  min-width: 250px !important;
+  max-width: 250px !important;
+  height: 100vh;
+  min-height: 0;
+  padding: 16px 14px 0 !important;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 250px !important;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  background: #ffffff;
+  border-right: 1px solid #e9edf3;
+  z-index: 1000;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 19px;
+  font-weight: 700;
+  color: #173f3a;
+  padding: 0 7px;
+  margin-bottom: 25px;
+}
+
+.brand-icon {
+  background: #a1afff;
+  color: #2300a4;
+  padding: 7px 9px;
+  border-radius: 10px;
+}
+
+.menu-heading {
+  font-size: 10px;
+  font-weight: 700;
+  color: #9ba5b5;
+  letter-spacing: 1px;
+  padding-left: 10px;
+  margin-bottom: 7px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 9px 10px;
+  margin-bottom: 3px;
+  border: none;
+  background: transparent;
+  text-align: left;
+  text-decoration: none;
+  color: #687487;
+  border-radius: 8px;
+  font-size: 13px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.menu-item i {
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.menu-item:hover,
+.menu-item.active {
+  background: #97c1ffb7;
+  color: #2300a4;
+  font-weight: 600;
+}
+
+.sidebar-menu .menu-heading.mt-4 {
+  margin-top: 16px !important;
+}
+
+/* =========================================
+   SIDEBAR PROFILE - FULL WIDTH
+========================================= */
+
+.sidebar-bottom {
+  width: 100%;
+  min-width: 0;
+  margin-top: auto;
+  padding: 12px 0 10px !important;
+  border-top: 1px solid #edf0f5;
+  flex-shrink: 0;
+}
+
+.user-mini {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 9px;
+  width: 100% !important;
+  min-width: 0;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none;
+  background: transparent;
+  text-align: left;
+}
+
+.user-mini > div {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.user-mini h6 {
+  margin: 0;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.user-mini small {
+  color: #929aaa;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.user-mini > i {
+  margin-left: auto !important;
+  flex-shrink: 0;
+  color: #929aaa;
+  font-size: 14px;
+}
+
+.user-mini:hover {
+  opacity: 0.8;
+}
+
+.avatar,
+.profile-avatar {
+  width: 34px;
+  height: 34px;
+  min-width: 34px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #a1afff;
+  color: #2300a4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.main-content {
+  margin-left: 250px;
+  width: calc(100% - 250px);
+  height: 100vh;
+  min-width: 0;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.topbar {
+  position: relative;
+  z-index: 100;
+  width: 100%;
+  max-width: 100%;
+  flex: 0 0 auto;
+  background: #97c1ffb7;
+  padding: 20px 35px;
+  border-bottom: 1px solid #e9edf3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  min-width: 0;
+}
+
+.topbar h4 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.topbar p {
+  margin: 5px 0 0;
+  color: #687487;
+  font-size: 13px;
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+.icon-button {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  border: 1px solid #e9edf3;
+  background: white;
+  border-radius: 10px;
+  font-size: 17px;
+  color: #687487;
+  cursor: pointer;
+}
+
+.dashboard-content {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  flex: 1 1 auto;
+  height: 0;
+  min-height: 0;
+  padding: 30px 35px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  min-width: 0;
+}
+
+.section-header h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.section-header p {
+  font-size: 13px;
+  color: #687487;
+  margin: 0;
+}
+
+.create-btn {
+  background: #2300a4;
+  color: white;
+  border-radius: 8px;
+  padding: 11px 17px;
+  font-size: 13px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.create-btn:hover {
+  background: #2300a4;
+  color: white;
+}
+
+/* =========================================
+   SUMMARY CARDS
+========================================= */
+
+.summary-card {
+  background: #cce3ffb7;
+  border: 1px solid #edf0f5;
+  border-radius: 12px;
+  padding: 20px;
+  height: 100%;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.summary-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  color: #687487;
+  font-size: 13px;
+}
+
+.summary-top i {
+  font-size: 20px;
+  color: #2300a4;
+  background: #a1afff;
+  padding: 8px;
+  border-radius: 9px;
+  flex-shrink: 0;
+}
+
+.summary-card h3 {
+  font-size: 25px;
+  font-weight: 700;
+  margin: 18px 0 5px;
+}
+
+.summary-card small {
+  color: #687487;
+  font-size: 12px;
+}
+
+.positive-amount {
+  color: #17845e !important;
+}
+
+.negative-amount {
+  color: #e05c61 !important;
+}
+
+/* =========================================
+   DASHBOARD CARDS
+========================================= */
+
+.dashboard-card {
+  background: #cce3ffb7;
+  border: 1px solid #edf0f5;
+  border-radius: 12px;
+  padding: 22px;
+  height: 100%;
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.card-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 22px;
+  min-width: 0;
+}
+
+.card-heading h5 {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.card-heading p {
+  font-size: 12px;
+  color: #687487;
+  margin: 0;
+}
+
+.balance-icon {
+  padding: 10px 13px;
+  border-radius: 10px;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.balance-icon.green {
+  background: #eaf6f1;
+  color: #17845e;
+}
+
+.balance-icon.red {
+  background: #fff0f0;
+  color: #e05c61;
+}
+
+/* =========================================
+   TABLES
+========================================= */
+
+.balance-table,
+.events-table {
+  width: 100%;
+  max-width: 100%;
+  font-size: 12px;
+  white-space: normal;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.balance-table th,
+.balance-table td,
+.events-table th,
+.events-table td {
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+.balance-table thead th,
+.events-table thead th {
+  background: #97c1ffb7;
+  color: #687487;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid #edf0f5;
+  padding: 12px 8px;
+}
+
+.balance-table tbody td,
+.events-table tbody td {
+  background: #97c1ffb7;
+  padding: 15px 8px;
+  vertical-align: middle;
+  color: #687487;
+}
+
+.balance-table tbody strong,
+.events-table tbody strong {
+  background: transparent;
+  color: #273447;
+  font-weight: 600;
+}
+
+.table-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding-top: 17px;
+  border-top: 1px solid #edf0f5;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* =========================================
+   EVENTS
+========================================= */
+
+.events-card {
+  margin-bottom: 30px;
+}
+
+.view-all-btn {
+  background: none;
+  border: none;
+  color: #2300a4;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.status-badge {
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 600;
+  display: inline-block;
+  white-space: normal;
+}
+
+.status-badge.settled {
+  background: #eaf6f1;
+  color: #17845e;
+}
+
+.status-badge.pending {
+  background: #fff3e4;
+  color: #d58a25;
+}
+
+.status-badge.partial {
+  background: #edf1ff;
+  color: #536fcb;
+}
+
+/* =========================================
+   NOTIFICATIONS
+========================================= */
+
+.notification-count {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  background: #e05c61;
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.notification-panel {
+  position: absolute;
+  top: 48px;
+  right: 0;
+  width: 320px;
+  max-width: calc(100vw - 30px);
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+  color: #263238 !important;
+  border: 1px solid #e9edf3;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 8px 25px rgba(25, 40, 70, 0.15);
+  z-index: 1000;
+  opacity: 1 !important;
+}
+
+.notification-panel * {
+  opacity: 1 !important;
+}
+
+.notification-panel-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.notification-panel-heading h5 {
+  margin: 0 0 5px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #263238;
+}
+
+.notification-panel-heading p {
+  margin: 0;
+  color: #687487;
+  font-size: 12px;
+}
+
+.notification-panel-heading button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.notification-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 0;
+  border-top: 1px solid #edf0f5;
+  min-width: 0;
+}
+
+.notification-item > div {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.notification-item > i {
+  color: #2300a4;
+  font-size: 19px;
+  flex-shrink: 0;
+}
+
+.notification-item strong {
+  font-size: 13px;
+  color: #263238;
+}
+
+.notification-item p {
+  margin: 4px 0 0;
+  font-size: 12px;
+  color: #687487;
+}
+
+.notification-empty {
+  margin: 0 0 12px;
+  color: #687487;
+  font-size: 13px;
+}
+
+/* =========================================
+   PROFILE PAGE
+========================================= */
+
+.profile-large-avatar {
+  width: 55px;
+  height: 55px;
+  font-size: 22px;
+}
+
+.profile-card {
+  max-width: 750px;
+  width: 100%;
+  min-width: 0;
+}
+
+/* =========================================
+   RESPONSIVE - TABLETS
+========================================= */
+
+@media (max-width: 900px) {
+  .sidebar {
+    width: 250px !important;
+    min-width: 250px !important;
+    max-width: 250px !important;
+  }
+
+  .main-content {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+  }
+
+  .dashboard-content {
+    padding: 25px 20px;
+  }
+
+  .topbar {
+    padding: 20px;
+  }
+
+  .topbar-actions {
+    gap: 12px;
+  }
+
+  .dashboard-card,
+  .summary-card {
+    padding: 16px;
+  }
+}
+
+/* =========================================
+   RESPONSIVE - SMALL TABLETS
+========================================= */
+
+@media (max-width: 768px) and (min-width: 651px) {
+  .sidebar {
+    width: 250px !important;
+    min-width: 250px !important;
+    max-width: 250px !important;
+    padding: 16px 14px 0 !important;
+  }
+
+  .sidebar .brand {
+    justify-content: flex-start;
+    padding: 0 7px;
+  }
+
+  .sidebar .brand > span,
+  .sidebar .menu-heading {
+    display: initial;
+  }
+
+  .sidebar .menu-item {
+    justify-content: flex-start;
+    font-size: 13px;
+    padding: 9px 10px;
+  }
+
+  .sidebar .menu-item i {
+    font-size: 16px;
+  }
+
+  .sidebar .user-mini > div {
+    display: block;
+  }
+
+  .sidebar .user-mini {
+    justify-content: flex-start;
+  }
+
+  .main-content {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+  }
+
+  .dashboard-content {
+    padding: 20px 15px;
+  }
+
+  .topbar {
+    padding: 18px 15px;
+  }
+
+  .topbar h4 {
+    font-size: 18px;
+  }
+
+  .topbar-actions {
+    gap: 8px;
+  }
+
+  .dashboard-card,
+  .summary-card {
+    padding: 15px;
+  }
+}
+
+/* =========================================
+   RESPONSIVE - MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+  .sidebar {
+    display: none;
+  }
+
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+    height: 100vh;
+    min-height: 0;
+  }
+
+  .section-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .dashboard-content {
+    padding: 20px 12px;
+  }
+
+  .topbar {
+    padding: 18px 12px;
+    flex-wrap: wrap;
+  }
+
+  .topbar-actions {
+    gap: 10px;
+  }
+
+  .notification-panel {
+    right: -55px;
+    max-width: calc(100vw - 24px);
+  }
+
+  .dashboard-card,
+  .summary-card {
+    padding: 15px;
+  }
+
+  .balance-table,
+  .events-table {
+    font-size: 11px;
+  }
+
+  .balance-table thead th,
+  .events-table thead th,
+  .balance-table tbody td,
+  .events-table tbody td {
+    padding: 9px 5px;
+  }
+
+  .dashboard-content {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto;
+  }
+}
+
+/* =========================================
+   EXTRA SMALL SCREENS
+========================================= */
+
+@media (max-width: 400px) {
+  .topbar h4 {
+    font-size: 16px;
+  }
+
+  .topbar p {
+    font-size: 11px;
+  }
+
+  .dashboard-content {
+    padding: 15px 8px;
+  }
+
+  .section-header h3 {
+    font-size: 19px;
+  }
+
+  .dashboard-card,
+  .summary-card {
+    padding: 12px;
+  }
+
+  .summary-card h3 {
+    font-size: 21px;
+  }
+}
+
+/* =========================================
+   FULL-PAGE FORMS - INDEPENDENT SCROLLING
+========================================= */
+
+#root:has(.event-details-page),
+#root:has(.create-event-page) {
+  height: 100vh;
+  min-height: 0;
+  overflow: hidden;
+}
+
+#root:has(.event-details-page) .event-details-page,
+#root:has(.create-event-page) .create-event-page {
+  height: 100vh;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior-y: contain;
+  -webkit-overflow-scrolling: touch;
+  box-sizing: border-box;
+}
